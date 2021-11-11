@@ -36,6 +36,21 @@ app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
+
+//production only
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend','build', 'index.html'));
+  });
+}
+
+
+
+
+
+
 // app.get('/', (req, res) => {
 //   res.send('Server is ready');
 // });
@@ -110,8 +125,8 @@ io.on('connection', (socket) => {
         user.messages.push(message);
       } else {
         io.to(socket.id).emit('message', {
-          name: 'Admin',
-          body: 'Sorry. I am not online right now',
+          name: 'OmartKe',
+          body: 'Sorry. I we are not online right now',
         });
       }
     }

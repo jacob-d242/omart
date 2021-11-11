@@ -1,18 +1,19 @@
 {
-  "name": "Omart",
+  "name": "omartkenya2021",
   "type": "module",
   "version": "1.0.0",
   "description": "Omart Kenya",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:jacob-d242/Omartkenya2021.git"
   },
-  "author": "",
+  "author": "omartKenya",
   "license": "ISC",
   "bugs": {
     "url": "git@github.com:jacob-d242/Omartkenya2021.git"
