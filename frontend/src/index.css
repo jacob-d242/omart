@@ -52,7 +52,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: #00ff0d;
 }
 ul {
   padding: 0;
@@ -82,10 +82,10 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #404040 solid;
+  border: 0.1rem #00ff0d solid;
 }
 button.primary {
-  background-color: #f0c040;
+  background-color: #00ff0d;
 }
 button.block {
   width: 100%;
@@ -146,7 +146,8 @@ aside {
   position: fixed;
   width: 30rem;
   height: 100%;
-  background-color: #efefef;
+  margin-top:50px;
+  background-color: #ebf0cf;
   z-index: 1000;
   transform: translateX(-30rem);
   transition: all 0.5s;
@@ -163,7 +164,7 @@ button.open-sidebar {
   cursor: pointer;
 }
 button.open-sidebar:hover {
-  border-color: #ffffff;
+  border-color: #063be7;
 }
 aside ul {
   padding: 0;
@@ -430,7 +431,7 @@ img.large {
 }
 
 .support-users li:hover {
-  background-color: #f0f0f0;
+  background-color: #00ff0d;
 }
 .support-users li.selected {
   background-color: #c0c0c0;
