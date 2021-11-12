@@ -11,13 +11,13 @@
     display: flex;
     align-items: center;
   }
-li{
+.list-none li{
   cursor: pointer;
   list-style: none;
   font-size: 20px;
   color: #ffffff;
 }
-li:hover{
+.list-none li:hover{
   color: #183a79;
 }
 h4{
