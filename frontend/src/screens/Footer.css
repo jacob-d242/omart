@@ -1,0 +1,34 @@
+.main-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #203040;
+     color: #ffffff;
+  }
+.rowbottom {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+li{
+  cursor: pointer;
+  list-style: none;
+  font-size: 20px;
+  color: #ffffff;
+}
+li:hover{
+  color: #183a79;
+}
+h4{
+  font-size:30px;
+}
+/*.col-sm{
+  display:flex;
+  text-align:center;
+  justify-content:space-between;
+}*/
+.rowfooter {
+  display: flex;
+  justify-content: center;
+  }

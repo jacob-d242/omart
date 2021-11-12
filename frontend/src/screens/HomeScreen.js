@@ -47,6 +47,7 @@ export default function HomeScreen() {
           </Carousel>
         </>
       )}
+          <div>kenya</div>
       <h2>Featured Products</h2>
       {loading ? (
         <LoadingBox></LoadingBox>

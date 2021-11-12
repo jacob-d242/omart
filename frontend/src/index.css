@@ -200,6 +200,7 @@ img.large {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
+  color:#111;
   margin: 1rem;
 }
 .card-body {
@@ -310,7 +311,8 @@ img.large {
 }
 /* Carousel */
 .carousel .slide img {
-  max-width: 30rem;
+  max-width: 50%;
+  max-height:250px;
 }
 
 /* Search */
