@@ -55,8 +55,8 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
-      <div className="grid-container">
-        <header className="row">
+      {/*<div className="grid-container">*/}
+        <header className="">
           <div>
             <button
               type="button"
@@ -146,6 +146,7 @@ function App() {
             )}
           </div>
         </header>
+      <div className="grid-container">
         <aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
             <li>

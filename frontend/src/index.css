@@ -26,8 +26,14 @@ body {
   height: 100%;
 }
 header {
-  grid-area: header;
+  width:100%;
+  position:fixed;
+  /*grid-area: header;*/
+  height:60px;
+  display:flex;
+  justify-content:space-between;
   background-color: #203040;
+  align-items:center;
 }
 main {
   grid-area: main;
@@ -469,4 +475,30 @@ img.large {
 }
 .support-users .unread {
   background-color: #f02020;
+}
+@media screen and (max-width: 640px){
+  a.brand {
+    font-size: 10px;
+  }
+  aside.open {
+    width:100px;
+  }
+  header{
+    height:40px;
+    font-size:10px;
+  }
+
+  button.open-sidebar {
+    font-size: 10px;
+    height:100%;
+    border:none;
+  }
+  .search button {
+   font-size:2px;
+   color:#111;
+  }
+  .search input {
+    width:60px;
+    padding:2px;
+  }
 }
