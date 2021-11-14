@@ -78,7 +78,7 @@ function App() {
           </div>
           <div>
             <Link to="/cart">
-              Cart
+             <i class="fa fa-shopping-cart" aria-hidden="true" fa-lg/>
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
@@ -90,20 +90,20 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/profile">User Profile</Link>
+                    <Link to="/profile"><i class="fa fa-user" aria-hidden="true"/></Link>
                   </li>
                   <li>
-                    <Link to="/orderhistory">Order History</Link>
+                    <Link to="/orderhistory"><i class="fa fa-sort" aria-hidden="true" /></Link>
                   </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
-                      Sign Out
+                     <i class="fa fa-sign-out" aria-hidden="true"/>
                     </Link>
                   </li>
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <Link to="/signin"><i class="fa fa-sign-in" aria-hidden="true" /></Link>
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
@@ -127,19 +127,19 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/dashboard"><i class="fa fa-line-chart" aria-hidden="true" /></Link>
                   </li>
                   <li>
-                    <Link to="/productlist">Products</Link>
+                    <Link to="/productlist"><i class="fa fa-list" aria-hidden="true" /></Link>
                   </li>
                   <li>
                     <Link to="/orderlist">Orders</Link>
                   </li>
                   <li>
-                    <Link to="/userlist">Users</Link>
+                    <Link to="/userlist"><i class="fa fa-users" aria-hidden="true"/></Link>
                   </li>
                   <li>
-                    <Link to="/support">Support</Link>
+                    <Link to="/support"> <i class="fa fa-question-circle" aria-hidden="true" /> </Link>
                   </li>
                 </ul>
               </div>

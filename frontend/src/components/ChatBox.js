@@ -91,7 +91,7 @@ export default function ChatBox(props) {
                 type="text"
                 placeholder="type message"
               />
-              <button type="submit">Send</button>
+              <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true" /></button>
             </form>
           </div>
         </div>

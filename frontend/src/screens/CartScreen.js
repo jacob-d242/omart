@@ -33,7 +33,7 @@ export default function CartScreen(props) {
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart is empty. <Link to="/">Go Shopping</Link>
+            Cart is empty. <Link to="/">Explore our latest deals</Link>
           </MessageBox>
         ) : (
           <ul>
@@ -69,10 +69,10 @@ export default function CartScreen(props) {
                   <div>KSh {item.price}</div>
                   <div>
                     <button
-                      type="button"
+                      type="button danger"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      Delete
+                     <i class="fa fa-trash-o" aria-hidden="true" />
                     </button>
                   </div>
                 </div>

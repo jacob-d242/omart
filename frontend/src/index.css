@@ -90,6 +90,9 @@ textarea:hover,
 button:hover {
   border: 0.1rem #00ff0d solid;
 }
+button i.danger{
+  color: #a02020;
+}
 button.primary {
   background-color: #00ff0d;
 }
@@ -103,6 +106,9 @@ button.small {
 header a {
   color: #ffffff;
   padding: 1rem;
+}
+header i{
+  font-size:20px;
 }
 a.brand {
   color: #ffffff;
@@ -233,6 +239,7 @@ img.large {
 .success {
   color: #20a020;
 }
+
 .danger {
   color: #a02020;
 }
@@ -275,7 +282,7 @@ img.large {
   position: absolute;
   display: none;
   right: 0;
-  min-width: 12rem;
+  min-width: 10px;
   padding: 1rem;
   z-index: 1;
   background-color: #203040;
@@ -295,8 +302,8 @@ img.large {
   font-weight: bold;
 }
 .checkout-steps > div.active {
-  border-top-color: #f08000;
-  color: #f08000;
+  border-top-color: #1ee21e;
+  color: #1ee21e;
 }
 /* Table */
 .table {
@@ -364,7 +371,7 @@ img.large {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
-  border: 0.1rem #a4a4a4 solid;
+  border: 0.1rem #0c0529 solid;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
