@@ -32,6 +32,7 @@ import DashboardScreen from './screens/DashboardScreen';
 import SupportScreen from './screens/SupportScreen';
 import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
+import ImageSlider from './components/ImageSlider'
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -55,7 +56,7 @@ function App() {
   }, [dispatch]);
   return (
     <BrowserRouter>
-      {/*<div className="grid-container">*/}
+      <div className="grid-container">
         <header className="">
           <div>
             <button
@@ -90,20 +91,20 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/profile"><i class="fa fa-user" aria-hidden="true"/></Link>
+                    <Link to="/profile"><i class="fa fa-user" aria-hidden="true"> Profile</i></Link>
                   </li>
                   <li>
-                    <Link to="/orderhistory"><i class="fa fa-sort" aria-hidden="true" /></Link>
+                    <Link to="/orderhistory"><i class="fa fa-sort" aria-hidden="true" > Orders</i></Link>
                   </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
-                     <i class="fa fa-sign-out" aria-hidden="true"/>
+                     <i class="fa fa-sign-out" aria-hidden="true"> Sign Out</i>
                     </Link>
                   </li>
                 </ul>
               </div>
             ) : (
-              <Link to="/signin"><i class="fa fa-sign-in" aria-hidden="true" /></Link>
+              <Link to="/signin">Sign in</Link>
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
@@ -146,7 +147,7 @@ function App() {
             )}
           </div>
         </header>
-      <div className="grid-container">
+      {/*<div className="grid-container">*/}
         <aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
             <li>

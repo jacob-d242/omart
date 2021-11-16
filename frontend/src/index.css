@@ -35,6 +35,11 @@ header {
   background-color: #203040;
   align-items:center;
 }
+/*//home slider*/
+.homebanner{
+  margin-top:20px;
+}
+
 main {
   grid-area: main;
   padding: 1rem;
@@ -114,6 +119,10 @@ a.brand {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
+}
+.brand img{
+  width: 100px !important;
+  height: 100px !important;
 }
 .badge {
   background-color: #f02020;
