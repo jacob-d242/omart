@@ -33,6 +33,7 @@ import SupportScreen from './screens/SupportScreen';
 import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
 import ImageSlider from './components/ImageSlider'
+import AboutUs from './components/AboutUs';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -58,18 +59,23 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
         <header className="">
-          <div>
-            <button
-              type="button"
-              className="open-sidebar"
-              onClick={() => setSidebarIsOpen(true)}
-            >
-              <i className="fa fa-bars"></i>
-            </button>
-            <Link className="brand" to="/">
-            OMART
+          {/*<div>
+            <div>
+               <button
+                 type="button"
+                 className="open-sidebar"
+                  onClick={() => setSidebarIsOpen(true)}
+                  >
+                 <i className="fa fa-bars"></i>
+                 </button>
+            </div>
+          </div>*/}
+            <div>
+               <Link className="brand" to="/">
+              {/*OMART*/}
+              <img src="https://omart.huttech.co.ke/images/logo.png" alt="omart" width={ 139} height={32}/>
             </Link>
-          </div>
+            </div>
           <div>
             <Route
               render={({ history }) => (
@@ -140,7 +146,7 @@ function App() {
                     <Link to="/userlist"><i class="fa fa-users" aria-hidden="true"/></Link>
                   </li>
                   <li>
-                    <Link to="/support"> <i class="fa fa-question-circle" aria-hidden="true" /> </Link>
+                    <Link to="/support"> <i class="fa fa-question-circle " aria-hidden="true" /> </Link>
                   </li>
                 </ul>
               </div>
@@ -189,6 +195,7 @@ function App() {
           ></Route>
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
+          <Route path="/AboutUs" component={AboutUs}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
@@ -254,14 +261,14 @@ function App() {
             path="/orderlist/seller"
             component={OrderListScreen}
           ></SellerRoute>
-
+          
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         
         <footer className="row center">
           {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
           <Footer/>
-         
+              
         </footer>
       </div>
     </BrowserRouter>

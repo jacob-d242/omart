@@ -6,10 +6,13 @@
      color: #ffffff;
   }
 .rowbottom {
-    align-items: center;
-    justify-content: space-around;
+   
     display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  .list-none{
+    
   }
 .list-none li{
   cursor: pointer;

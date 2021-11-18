@@ -18,9 +18,16 @@ export default function PlaceOrderScreen(props) {
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
+  //cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
+  //cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
+  //cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+  //const dispatch = useDispatch();
+  //const placeOrderHandler = () => {
+  //  dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
+  //};
   cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
-  cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+  cart.taxPrice = toPrice(cart.itemsPrice);
+  cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
   const dispatch = useDispatch();
   const placeOrderHandler = () => {
     dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
@@ -77,7 +84,7 @@ export default function PlaceOrderScreen(props) {
                         </div>
 
                         <div>
-                          {item.qty} x KSh {item.price} = ${item.qty * item.price}
+                          {item.qty} x KSh {item.price} ={item.qty * item.price}
                         </div>
                       </div>
                     </li>
@@ -106,9 +113,13 @@ export default function PlaceOrderScreen(props) {
                 </div>
               </li>
               <li>
-                <div className="row">
+                {/*<div className="row">
                   <div>Tax</div>
                   <div>KSh {cart.taxPrice.toFixed(2)}</div>
+                </div>*/}
+                <div className="row">
+                  <div>VAT</div>
+                  <div>KSh <strong>0.00</strong></div>
                 </div>
               </li>
               <li>

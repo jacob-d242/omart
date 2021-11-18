@@ -154,8 +154,8 @@ export default function OrderScreen(props) {
               </li>
               <li>
                 <div className="row">
-                  <div>Items</div>
-                  <div>${order.itemsPrice.toFixed(2)}</div>
+                  <div>Sub Total</div>
+                  <div>KSh{order.itemsPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
@@ -167,13 +167,14 @@ export default function OrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Tax</div>
-                  <div>KSh{order.taxPrice.toFixed(2)}</div>
+                      {/*<div>KSh{order.taxPrice.toFixed(2)}</div>*/}
+                      <div>KSh <strong>0.00</strong></div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>
-                    <strong> Order Total</strong>
+                    <strong>Total</strong>
                   </div>
                   <div>
                     <strong>KSh{order.totalPrice.toFixed(2)}</strong>

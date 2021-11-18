@@ -7,7 +7,7 @@ export default function ImageSlider() {
     <div className="homebanner">
        <Carousel autoFocus={true} autoPlay={true} showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">
               <div key="content-0" className="my-slide primary">
-                  <h1>Omart Kenya</h1>
+                 
                   <img src="https://meuresiduo.com/wp-content/uploads/2021/03/WhatsApp-Image-2021-03-18-at-11.02.48-1024x536.jpeg"/>
               </div>
               <div key="content-1" className="my-slide secondary">
@@ -21,7 +21,7 @@ export default function ImageSlider() {
               </div>
               <div key="content-4" className="my-slide content">
                   <p>
-                      S<img src="https://www.switch-asia.eu/site/assets/files/2109/resizes/zero-waste.jpg" />
+                      <img src="https://www.switch-asia.eu/site/assets/files/2109/resizes/zero-waste.jpg" />
                   </p>
               </div>
               <div key="content-5" className="my-slide content">

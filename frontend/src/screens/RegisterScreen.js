@@ -81,12 +81,17 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
+          <label>
+          <h2>  By Registering you agree to our <Link to="/Policy">terms and conditions </Link></h2>
+        </label>
+        </div>
+        <div>
           <label />
           <button className="primary" type="submit">
             Register
           </button>
-        </div>
-        <div>
+            </div>
+            <div>
           <label />
           <div>
             Already have an account?{' '}
