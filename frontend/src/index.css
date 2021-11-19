@@ -39,11 +39,26 @@ header {
 /*//home slider*/
 .homebanner{
   margin-top:20px;
+  width:100%;
 }
+.homeslide{
+  display:flex;
+  flex-direction:column;
+}
+.slide{
+  flex:1;
+  float:right;
+}
+.categories{
+  flex:2;
+  float: Left;
+}
+
 
 main {
   grid-area: main;
   padding: 1rem;
+  background-color: #cfe7d0;
 }
 footer {
   grid-area: footer;
@@ -65,7 +80,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #00ff0d;
+  color: #b0b435;
 }
 ul {
   padding: 0;
@@ -95,7 +110,8 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #00ff0d solid;
+ 
+  border: 0.1rem #b0b435 solid;
 }
 button i.danger{
   color: #a02020;
@@ -187,7 +203,10 @@ button.open-sidebar {
   cursor: pointer;
 }
 button.open-sidebar:hover {
-  border-color: #063be7;
+  border-color: #b0b435;
+}
+.category h2{
+  background-color:#111;
 }
 aside ul {
   padding: 0;
@@ -223,7 +242,7 @@ img.large {
 .card-product{
   height: 300px;
   width: 250px;
-  border: 0.1rem #c0c0c0 solid;
+  border: 2px #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   color:#111;
@@ -232,7 +251,7 @@ img.large {
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   color:#111;
   margin: 1rem;
 }
@@ -244,6 +263,11 @@ img.large {
 }
 .price {
   font-size: 2rem;
+  color:#dbe72e;
+  background-color: #203040;
+  padding: 0.5rem;
+  border-radius: 3px;
+  
 }
 /* Rating */
 .rating span {

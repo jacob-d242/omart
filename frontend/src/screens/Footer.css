@@ -18,8 +18,9 @@
   .list-none ul li{
   color: #ffffff;
 }
+
 .list-none li:hover{
-  color: #e4e7ec;
+  color: #b0b435;
 }
 h4{
   font-size:30px;

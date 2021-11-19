@@ -9,6 +9,7 @@ import { listProducts } from '../actions/productActions';
 import { listTopSellers } from '../actions/userActions';
 import { Link } from 'react-router-dom';
 import ImageSlider from '../components/ImageSlider'
+import MultipleSlides from '../components/MultipleSlides';
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
@@ -35,7 +36,8 @@ export default function HomeScreen() {
         <MessageBox variant="danger">{errorSellers}</MessageBox>
       ) : (
         <>
-           <ImageSlider />
+              <ImageSlider />
+              {/*<MultipleSlides/>*/}
           {/*{sellers.length === 0 && <MessageBox>No Seller Found</MessageBox>}*/}
           {/*<Carousel showArrows autoPlay showThumbs={false}>
             {sellers.map((seller) => (
@@ -63,8 +65,9 @@ export default function HomeScreen() {
               <Product key={product._id} product={product}></Product>
             ))}
           </div>
-        </>
+            </>
       )}
+      
     </div>
   );
 }
