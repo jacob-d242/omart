@@ -3,21 +3,19 @@
     bottom: 0;
     width: 100%;
     background-color: #203040;
-     color: #ffffff;
   }
-.rowbottom {
-   
+.rowbottom .list-none{
+    justify-content: space-evenly;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+     flex-direction: row;
+   align-items: center;
   }
-  .list-none{
-    
+  li{    
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
   }
-.list-none li{
-  cursor: pointer;
-  list-style: none;
-  font-size: 20px;
+  .list-none ul li{
   color: #ffffff;
 }
 .list-none li:hover{
@@ -26,11 +24,6 @@
 h4{
   font-size:30px;
 }
-/*.col-sm{
-  display:flex;
-  text-align:center;
-  justify-content:space-between;
-}*/
 .rowfooter {
   display: flex;
   justify-content: center;
@@ -45,7 +38,6 @@ h4{
     .list-none li{
       cursor: pointer;
       font-size: 10px;
-      color: #ffffff;
     }
     h4{
       font-size:12px;

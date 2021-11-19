@@ -28,6 +28,7 @@ body {
 header {
   width:100%;
   position:fixed;
+  z-index: 1000;
   /*grid-area: header;*/
   height:60px;
   display:flex;
@@ -51,7 +52,8 @@ footer {
 }
 /* Common */
 h1 {
-  font-size: 1.8rem;
+  
+  font-size: 14px;
   padding: 1rem 0;
 }
 h2 {

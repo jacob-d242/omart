@@ -82,7 +82,7 @@ export default function RegisterScreen(props) {
         </div>
         <div>
           <label>
-          <h2>  By Registering you agree to our <Link to="/Policy">terms and conditions </Link></h2>
+          <h2>  By Registering you agree to our <Link to="/PrivacyPolicy">terms and conditions </Link></h2>
         </label>
         </div>
         <div>

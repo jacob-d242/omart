@@ -34,6 +34,7 @@ import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
 import ImageSlider from './components/ImageSlider'
 import AboutUs from './components/AboutUs';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -196,6 +197,7 @@ function App() {
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/AboutUs" component={AboutUs}></Route>
+          <Route path="/PrivacyPolicy" component={PrivacyPolicy}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>

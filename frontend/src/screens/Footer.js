@@ -10,10 +10,10 @@ function Footer() {
         <div className="rowbottom">
           
             <ui className="list-none">
-                 <li><Link to="/">Contact Us</Link> </li> 
                 <li><Link to="/">Shop</Link> </li> 
+                 <li><Link to="/">Contact Us</Link> </li> 
                  <li> <Link to="/AboutUs">About us</Link></li>
-                 <li>Terms of service</li>
+                 <li><Link>Terms of service</Link></li>
             </ui>
           
         </div>
