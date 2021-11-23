@@ -46,15 +46,15 @@ function App() {
     dispatch(signout());
   };
 
-  const productCategoryList = useSelector((state) => state.productCategoryList);
-  const {
-    loading: loadingCategories,
-    error: errorCategories,
-    categories,
-  } = productCategoryList;
-  useEffect(() => {
-    dispatch(listProductCategories());
-  }, [dispatch]);
+  //const productCategoryList = useSelector((state) => state.productCategoryList);
+  //const {
+  //  loading: loadingCategories,
+  //  error: errorCategories,
+  //  categories,
+  //} = productCategoryList;
+  //useEffect(() => {
+  //  dispatch(listProductCategories());
+  //}, [dispatch]);
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -154,7 +154,7 @@ function App() {
           </div>
         </header>
       {/*<div className="grid-container">*/}
-        <aside className={sidebarIsOpen ? 'open' : ''}>
+        {/*<aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
             <li>
               <strong>Categories</strong>
@@ -183,7 +183,7 @@ function App() {
               ))
             )}
           </ul>
-        </aside>
+        </aside>*/}
         <main>
           <Route path="/seller/:id" component={SellerScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
