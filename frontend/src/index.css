@@ -29,6 +29,7 @@ header {
   width:100%;
   position:fixed;
   z-index: 1000;
+ 
   /*grid-area: header;*/
   height:60px;
   display:flex;
@@ -68,7 +69,7 @@ footer {
 /* Common */
 h1 {
   
-  font-size: 14px;
+  font-size: 19px;
   padding: 1rem 0;
 }
 h2 {
@@ -158,6 +159,7 @@ a.brand {
 }
 .row.center {
   justify-content: space-around;
+  margin:0;
 }
 .row.top {
   align-items: flex-start;
@@ -169,7 +171,7 @@ a.brand {
   flex: 1 1 25rem;
 }
 .col-2 {
-  flex: 2 1 50rem;
+  flex: 1 1 30rem;
 }
 .col-3 {
   flex: 32 1 75rem;
@@ -218,6 +220,7 @@ button.close-sidebar {
 /*styling homepage*/
 .column {
   display: flex;
+  flex-wrap:wrap;
   flex-direction: row;
   float: left;
   width:100%;
@@ -230,13 +233,16 @@ button.close-sidebar {
   clear: both;
 }
 .column .side{
-  width:25%;
+  /*width:25%;*/
+  display:none;
+  flex:1;
 }
 .column .centre{
-  width: 100%;
+  /*width: 100%;*/
+  flex:2;
 }
 .column .side .left{
-  background-image:  url("./order.jpg");
+  /*background-image:  url("./order.jpg");*/
   width: 100%;
   object-fit: contain;
   background-position: center;
@@ -246,9 +252,9 @@ button.close-sidebar {
     height:100%;
 }
 .hero-image{ 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./calltorder.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./order.jpg");
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;position: relative;
@@ -274,7 +280,7 @@ img {
 }
 img.small {
   max-width: 100%;
-  /*width: 100px;*/
+  width: 100px;
   object-fit: cover;
   height:auto;
   margin-left: auto;
@@ -286,8 +292,9 @@ img.medium {
   width: 100%;
 }
 img.large {
-  object-fit: scale-down;
-  width: 100%;
+  object-fit: cover;
+  max-width: 480px;
+  height:280px;
 }
 
 /* Card */
@@ -305,7 +312,7 @@ img.large {
   background-color: #f8f8f8;
   border-radius: 0.5em;
   color:#111;
-  margin: 1rem;
+  margin: 0.1em;
 }
 .card-body {
   padding: 1rem;
@@ -374,18 +381,19 @@ img.large {
 .dropdown {
   display: inline-block;
   position: relative;
+  margin-right:20px;
 }
 .dropdown-content {
   transition: 05s;
   position: absolute;
   display: none;
   right: 0;
-  min-width: 10px;
+  min-width: 18px;
   padding: 1rem;
   z-index: 1;
   background-color: #203040;
   margin: 0;
-  margin-top: 0.4rem;
+  margin-top: 0.1rem;
   border-radius: 0.5rem;
 }
 .dropdown:hover .dropdown-content {
@@ -510,6 +518,7 @@ img.large {
 
 /* Chatbox */
 .chatbox {
+  z-index:10000;
   color: #69e97e;
   position: fixed;
   right: 1rem;
@@ -520,7 +529,7 @@ img.large {
   max-height: 20rem;
 }
 .chatbox button:hover {
-  font-size: 60px;
+  font-size: 20px;
   color: #b0b435;
   transition: all 0.5rem;
   transition-delay: 0s;
@@ -589,9 +598,44 @@ img.large {
 .support-users .unread {
   background-color: #f02020;
 }
+
+
+/* media querrries */
+
 @media screen and (max-width: 640px){
+  /*@media screen and (max-width: 320px){
+    .search input {
+      width:90px;
+      padding:2px;
+    }
+  }*/
   a.brand {
     font-size: 10px;
+  }
+  /* homepage columns */
+  .column .centere{
+    max-width:100%;
+    height:200px;
+  }
+  .hero-image{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./calltorder.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .hero .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  /* end */
+  .column .side{
+    display:none;
   }
   .brand img {
     width: 60px !important;
@@ -604,7 +648,10 @@ img.large {
     height:40px;
     font-size:18px;
   }
-
+  h1,p,li,strong{
+    font-size:18px;
+  }
+  
   button.open-sidebar {
     font-size: 10px;
     height:100%;
@@ -615,10 +662,10 @@ img.large {
    color:#111;
   }
   .search input {
-    width:60px;
+    width:105px;
     padding:2px;
   }
-  /*.card {
+  .card {
     margin: 1rem;
   }
   .card-body {
@@ -634,8 +681,8 @@ img.large {
     padding: 0.5rem;
     border-radius: 3px;
     
-  }*/
-  /* Image */
+  }
+ 
 img {
   border-radius: 0.5rem;
 }

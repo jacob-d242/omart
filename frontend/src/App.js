@@ -34,6 +34,7 @@ import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
 import ImageSlider from './components/ImageSlider'
 import AboutUs from './components/AboutUs';
+import PrivacyPolicy from './components/PrivacyPolicy'
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -58,7 +59,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="">
+        <header className="header">
           {/*<div>
             <div>
                <button
@@ -93,11 +94,14 @@ function App() {
             {userInfo ? (
               <div className="dropdown">
                 <Link to="#">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
+                 <i class="fa fa-user" aria-hidden="true"></i>
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/profile"><i class="fa fa-user" aria-hidden="true"> Profile</i></Link>
+                        <h1> </h1>
+                  </li>
+                  <li>
+                    <Link to="/profile"> {userInfo.name} {' '}</Link>
                   </li>
                   <li>
                     <Link to="/orderhistory"><i class="fa fa-sort" aria-hidden="true" > Orders</i></Link>
@@ -196,6 +200,7 @@ function App() {
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/AboutUs" component={AboutUs}></Route>
+          <Route path="/PrivacyPolicy" component={PrivacyPolicy}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>

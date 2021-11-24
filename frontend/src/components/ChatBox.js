@@ -79,7 +79,7 @@ export default function ChatBox(props) {
           <ul ref={uiMessagesRef}>
             {messages.map((msg, index) => (
               <li key={index}>
-                <strong>{`${msg.name}: `}</strong> {msg.body}
+                <strong>{`${msg.name}: `}</strong><p> {msg.body}</p>
               </li>
             ))}
           </ul>

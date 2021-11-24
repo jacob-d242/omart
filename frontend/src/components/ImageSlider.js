@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import './product.css';
 
 export default function ImageSlider() {
     return (
         
         <div class="hero-image">
             <div class="hero-text">
-            <h1>Welcome to Omart</h1>
             <p>we have special offers just for you</p>
             <button><Link to="/">Start shopping</Link></button>
             </div>

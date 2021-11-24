@@ -65,38 +65,44 @@ export default function ProductScreen(props) {
                 alt={product.name}
               ></img>
             </div>
-            {/*<div className="col-1">
+            <div className="col-1">
               <ul>
                 <li>
                   <h1>{product.name}</h1>
                 </li>
-                <li>
+                {/*<li>
                   <Rating
                     rating={product.rating}
                     numReviews={product.numReviews}
                   ></Rating>
-                </li>
-                <li  >Price : KSh {product.price}</li>
+                </li>*/}
+                {/*<li  >Price : KSh {product.price}</li>*/}
                 <li>
                   Description:
                   <p>{product.description}</p>
                 </li>
               </ul>
-            </div>*/}
+            </div>
             <div className="col-1">
               <div className="card card-body">
                 <ul>
                   <li className="category">
-                    Seller{' '}
-                    <h2 >
+                   <h2> Seller{' '}
+                   
                       <Link to={`/seller/${product.seller._id}`}>
-                        <h2>{product.seller.seller.name}</h2>
+                        {product.seller.seller.name}
                       </Link>
                     </h2>
-                    <Rating
+                    {/*<Rating
                       rating={product.seller.seller.rating}
                       numReviews={product.seller.seller.numReviews}
-                    ></Rating>
+                    ></Rating>*/}
+                    <li>
+                  <Rating
+                    rating={product.rating}
+                    numReviews={product.numReviews}
+                  ></Rating>
+                </li>
                   </li>
                   <li>
                     <div className="row">
