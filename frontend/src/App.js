@@ -34,7 +34,9 @@ import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
 import ImageSlider from './components/ImageSlider'
 import AboutUs from './components/AboutUs';
-import PrivacyPolicy from './components/PrivacyPolicy'
+import PrivacyPolicy from './components/PrivacyPolicy';
+
+
 
 function App() {
   const cart = useSelector((state) => state.cart);

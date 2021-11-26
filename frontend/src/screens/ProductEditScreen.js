@@ -133,6 +133,7 @@ export default function ProductEditScreen(props) {
               <label htmlFor="imageFile">Image File</label>
               <input
                 type="file"
+                accept =",jpeg, .png , .jpg"
                 id="imageFile"
                 label="Choose Image"
                 onChange={uploadFileHandler}
