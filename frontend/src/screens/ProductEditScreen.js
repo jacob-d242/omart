@@ -71,7 +71,7 @@ export default function ProductEditScreen(props) {
     bodyFormData.append('image', file);
     setLoadingUpload(true);
     try {
-      const { data } = await Axios.post('/api/uploads', bodyFormData, {
+      const { data } = await Axios.post('https://omartbackendapi.herokuapp.com/api/uploads', bodyFormData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${userInfo.token}`,
@@ -123,7 +123,8 @@ export default function ProductEditScreen(props) {
               <label htmlFor="image">Image</label>
               <input
                 id="image"
-                type="text"
+                accept=".img, .png , .jpeg"
+                type=""
                 placeholder="Enter image"
                 value={image}
                 onChange={(e) => setImage(e.target.value)}

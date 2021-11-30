@@ -4,6 +4,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
+import cors from 'cors';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
@@ -11,7 +12,10 @@ import uploadRouter from './routers/uploadRouter.js';
 
 dotenv.config();
 
+
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -36,15 +40,17 @@ app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
-
+app.get('/', (req, res) => {
+  res.send('omartke')
+});
 //production only
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
+//if (process.env.NODE_ENV === 'production') {
+//  app.use(express.static('frontend/build'));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend','build', 'index.html'));
-  });
-}
+//  app.get('*', (req, res) => {
+//    res.sendFile(path.resolve(__dirname, 'frontend','build', 'index.html'));
+//  });
+//}
 
 
 

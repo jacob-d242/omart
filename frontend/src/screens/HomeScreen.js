@@ -26,16 +26,7 @@ export default function HomeScreen() {
   } = userTopSellersList;
   //category
   
-  const productCategoryList = useSelector((state) => state.productCategoryList);
-  const {
-    loading: loadingCategories,
-    error: errorCategories,
-    categories,
-  } = productCategoryList;
-  useEffect(() => {
-    dispatch(listProductCategories());
-  }, [dispatch]);
-
+ 
 
   //category end
   useEffect(() => {
@@ -54,53 +45,7 @@ export default function HomeScreen() {
             <>
             <div className="column">
               
-              {/*//category*/}
-                      <div className="column side">
-                            <div>
-                                <div>
-                                  <button
-                                    type="button"
-                                    className="open-sidebar"
-                                      onClick={() => setSidebarIsOpen(true)}
-                                      >
-                                    <i className="fa fa-bars"></i>
-                                    </button>
-                                </div>
-                              </div>
-                              {/* side bar is open */}
-                          <aside className={sidebarIsOpen ? 'open' : ''}>
-                                  <ul className="categories">
-                                    <li>
-                                      <strong>Categories</strong>
-                                      <button
-                                        onClick={() => setSidebarIsOpen(false)}
-                                        className="close-sidebar"
-                                        type="button"
-                                      >
-                                        <i className="fa fa-close"></i>
-                                      </button>
-                                    </li>
-                                    {loadingCategories ? (
-                                      <LoadingBox></LoadingBox>
-                                    ) : errorCategories ? (
-                                      <MessageBox variant="danger">{errorCategories}</MessageBox>
-                                    ) : (
-                                      categories.map((c) => (
-                                        <li key={c}>
-                                          <Link
-                                            to={`/search/category/${c}`}
-                                            onClick={() => setSidebarIsOpen(false)}
-                                          >
-                                            {c}
-                                          </Link>
-                                        </li>
-                                      ))
-                                    )}
-                                  </ul>
-                          </aside>
-                        </div>
-                        {/*End of side bar*/}
-                      {/*//category*/}
+                     
 
                 <div className="column centre">
                
@@ -117,11 +62,6 @@ export default function HomeScreen() {
                         </div>
                       ))}
                     </Carousel>*/}
-                </div>
-                <div className="column side ">
-                <div className="left">
-                   
-                </div>
                 </div>
             </div>
         </>

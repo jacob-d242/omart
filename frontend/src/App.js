@@ -34,7 +34,9 @@ import ChatBox from './components/ChatBox';
 import Footer from './screens/Footer';
 import ImageSlider from './components/ImageSlider'
 import AboutUs from './components/AboutUs';
-import PrivacyPolicy from './components/PrivacyPolicy'
+import PrivacyPolicy from './components/PrivacyPolicy';
+
+
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -46,36 +48,36 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
-
-  //const productCategoryList = useSelector((state) => state.productCategoryList);
-  //const {
-  //  loading: loadingCategories,
-  //  error: errorCategories,
-  //  categories,
-  //} = productCategoryList;
-  //useEffect(() => {
-  //  dispatch(listProductCategories());
-  //}, [dispatch]);
+  
+  const productCategoryList = useSelector((state) => state.productCategoryList);
+  const {
+    loading: loadingCategories,
+    error: errorCategories,
+    categories,
+  } = productCategoryList;
+  useEffect(() => {
+    dispatch(listProductCategories());
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="header">
-          {/*<div>
-            <div>
-               <button
-                 type="button"
-                 className="open-sidebar"
-                  onClick={() => setSidebarIsOpen(true)}
-                  >
-                 <i className="fa fa-bars"></i>
-                 </button>
-            </div>
-          </div>*/}
-            <div>
-               <Link className="brand" to="/">
-              {/*OMART*/}
-              <img src="https://omart.huttech.co.ke/images/logo.png" alt="omart" width={ 139} height={32}/>
-            </Link>
+        <div>
+            <div className="sidemenu">
+               <>
+                  <button
+                    type="button"
+                    className="open-sidebar"
+                      onClick={() => setSidebarIsOpen(true)}
+                      >
+                    <i className="fa fa-bars"></i>
+                    </button>
+                <Link className="brand" to="/">
+                  <img src="https://omart.huttech.co.ke/images/logo.png" alt="omart"width={ 139} height={32}/>
+                </Link>
+               </>
+
+              </div>
             </div>
           <div>
             <Route
@@ -157,37 +159,39 @@ function App() {
             )}
           </div>
         </header>
-      {/*<div className="grid-container">*/}
-        {/*<aside className={sidebarIsOpen ? 'open' : ''}>
-          <ul className="categories">
-            <li>
-              <strong>Categories</strong>
-              <button
-                onClick={() => setSidebarIsOpen(false)}
-                className="close-sidebar"
-                type="button"
-              >
-                <i className="fa fa-close"></i>
-              </button>
-            </li>
-            {loadingCategories ? (
-              <LoadingBox></LoadingBox>
-            ) : errorCategories ? (
-              <MessageBox variant="danger">{errorCategories}</MessageBox>
-            ) : (
-              categories.map((c) => (
-                <li key={c}>
-                  <Link
-                    to={`/search/category/${c}`}
-                    onClick={() => setSidebarIsOpen(false)}
-                  >
-                    {c}
-                  </Link>
-                </li>
-              ))
-            )}
-          </ul>
-        </aside>*/}
+       {/*<div className="grid-container">*/}
+       
+              <aside className={sidebarIsOpen ? 'open' : ''}>
+                <ul className="categories">
+                  <li className="categoriestop">
+                      
+                    <button
+                      onClick={() => setSidebarIsOpen(false)}
+                      className="close-sidebar"
+                      type="button"
+                    >
+                      <i className="fa fa-close"></i>
+                    </button>
+                  </li>
+                  {loadingCategories ? (
+                    <LoadingBox></LoadingBox>
+                  ) : errorCategories ? (
+                    <MessageBox variant="danger">{errorCategories}</MessageBox>
+                  ) : (
+                    categories.map((c) => (
+                      <li key={c}>
+                        <Link
+                          to={`/search/category/${c}`}
+                          onClick={() => setSidebarIsOpen(false)}
+                        >
+                          {c}
+                        </Link>
+                      </li>
+                    ))
+                  )}
+                </ul>
+              </aside>
+        
         <main>
           <Route path="/seller/:id" component={SellerScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
