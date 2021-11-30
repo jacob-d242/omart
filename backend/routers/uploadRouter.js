@@ -13,8 +13,16 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage});
 
+const fileFilter =(req, file, cb)=>{
+  const allowedFileTypes=['images/jpeg','images/jpg','images/png'];
+  if (allowedFileTypes.inclides(file.mimetype)){
+    cb(null, true);
+  }else{
+    cb(null,false);
+  }
+}
 uploadRouter.post('/', isAuth, upload.single('image'), (req, res) => {
   res.send(`/${req.file.path}`);
 });
